@@ -1,0 +1,73 @@
+﻿###########################
+# Trade Events
+###########################
+
+add_namespace = trade
+
+country_event = { #re-evaluate trade relationship
+	id = trade.1
+	title = trade.1.title
+	desc = trade.1.desc
+	trigger = {
+		has_opinion = { target = any_country value < -10 }	
+		any_country = {
+			has_opinion_modifier = embargo
+			has_opinion_modifier = sanctions
+			has_opinion_modifier = minor_sanctions
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		random_country = {
+			limit = { has_opinion = { target = PREV value < -10 } }
+			save_event_target_as = trade_target
+		}
+	}
+
+	option = {
+		name = trade.1.minorsanctions
+		event_target:trade_target = {
+			add_opinion_modifier = { target = ROOT modifier = minor_sanctions }
+			add_opinion_modifier = { target = ROOT modifier = relation_minor_sanctions }
+			country_event = { id = trade.2 }	
+		}
+	}
+
+	option = {
+		name = trade.1.sanctions
+		event_target:trade_target = {
+			add_opinion_modifier = { target = ROOT modifier = sanctions }
+			add_opinion_modifier = { target = ROOT modifier = relation_sanctions }
+			country_event = { id = trade.2 }
+
+		}
+	}
+
+	option = {
+		name = trade.1.embargo
+		event_target:trade_target = {
+			add_opinion_modifier = { target = ROOT modifier = embargo }
+			add_opinion_modifier = { target = ROOT modifier = relation_embargo }
+			country_event = { id = trade.2 }	
+		}	
+	}
+
+	option = {
+		name = trade.1.squo
+	}
+}
+
+country_event = { #from has sanctioned us
+	id = trade.2
+	title = trade.2.title
+	desc = trade.2.desc
+	is_triggered_only = yes
+
+	option = {
+		name = trade.2.a	
+	}
+}
