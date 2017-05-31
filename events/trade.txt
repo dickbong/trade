@@ -46,10 +46,78 @@ country_event = { #re-evaluate trade relationship
 	option = {
 		name = trade.1.minorsanctions
 		ai_chance = {
-			base = 1
+			base = 400
 			modifier = {
-				factor = 10			
-				event_target:trade_target
+				factor = 0.5			
+				any_owned_state = {
+					limit = {  
+						OR = {				
+							is_controlled_by = event_target:trade_target
+							is_owned_by = event_target:trade_target
+						}
+					}
+					has_resources_amount = { resource = chromium amount > 31 state = PREV }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_state = {
+					limit = {  
+						OR = {				
+							is_controlled_by = event_target:trade_target
+							is_owned_by = event_target:trade_target
+						}
+					}
+					has_resources_amount = { resource = steel amount > 31 state = PREV }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_state = {
+					limit = {  
+						OR = {				
+							is_controlled_by = event_target:trade_target
+							is_owned_by = event_target:trade_target
+						}
+					}
+					has_resources_amount = { resource = aluminium amount > 31 state = PREV }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_state = {
+					limit = {  
+						OR = {				
+							is_controlled_by = event_target:trade_target
+							is_owned_by = event_target:trade_target
+						}
+					}
+					has_resources_amount = { resource = tungsten amount > 31 state = PREV }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_state = {
+					limit = {  
+						OR = {				
+							is_controlled_by = event_target:trade_target
+							is_owned_by = event_target:trade_target
+						}
+					}
+					has_resources_amount = { resource = rubber amount > 31 state = PREV }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_state = {
+					limit = {  
+						OR = {				
+							is_controlled_by = event_target:trade_target
+							is_owned_by = event_target:trade_target
+						}
+					}
+					has_resources_amount = { resource = oil amount > 31 state = PREV }
+				}
 			}
 		}
 		add_opinion_modifier = { target = event_target:trade_target modifier = minor_sanctions }
@@ -63,6 +131,81 @@ country_event = { #re-evaluate trade relationship
 
 	option = {
 		name = trade.1.sanctions
+		ai_chance = {
+			base = 200
+			modifier = {
+				factor = 0.5			
+				any_owned_state = {
+					limit = {  
+						OR = {				
+							is_controlled_by = event_target:trade_target
+							is_owned_by = event_target:trade_target
+						}
+					}
+					has_resources_amount = { resource = chromium amount > 31 state = PREV }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_state = {
+					limit = {  
+						OR = {				
+							is_controlled_by = event_target:trade_target
+							is_owned_by = event_target:trade_target
+						}
+					}
+					has_resources_amount = { resource = steel amount > 31 state = PREV }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_state = {
+					limit = {  
+						OR = {				
+							is_controlled_by = event_target:trade_target
+							is_owned_by = event_target:trade_target
+						}
+					}
+					has_resources_amount = { resource = aluminium amount > 31 state = PREV }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_state = {
+					limit = {  
+						OR = {				
+							is_controlled_by = event_target:trade_target
+							is_owned_by = event_target:trade_target
+						}
+					}
+					has_resources_amount = { resource = tungsten amount > 31 state = PREV }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_state = {
+					limit = {  
+						OR = {				
+							is_controlled_by = event_target:trade_target
+							is_owned_by = event_target:trade_target
+						}
+					}
+					has_resources_amount = { resource = rubber amount > 31 state = PREV }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_state = {
+					limit = {  
+						OR = {				
+							is_controlled_by = event_target:trade_target
+							is_owned_by = event_target:trade_target
+						}
+					}
+					has_resources_amount = { resource = oil amount > 31 state = PREV }
+				}
+			}
+		}
 		add_opinion_modifier = { target = event_target:trade_target modifier = sanctions }
 		event_target:trade_target = { add_opinion_modifier = { target = ROOT modifier = relation_sanctions } }
 		hidden_effect = {
@@ -74,6 +217,81 @@ country_event = { #re-evaluate trade relationship
 
 	option = {
 		name = trade.1.embargo
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0.5			
+				any_owned_state = {
+					limit = {  
+						OR = {				
+							is_controlled_by = event_target:trade_target
+							is_owned_by = event_target:trade_target
+						}
+					}
+					has_resources_amount = { resource = chromium amount > 31 state = PREV }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_state = {
+					limit = {  
+						OR = {				
+							is_controlled_by = event_target:trade_target
+							is_owned_by = event_target:trade_target
+						}
+					}
+					has_resources_amount = { resource = steel amount > 31 state = PREV }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_state = {
+					limit = {  
+						OR = {				
+							is_controlled_by = event_target:trade_target
+							is_owned_by = event_target:trade_target
+						}
+					}
+					has_resources_amount = { resource = aluminium amount > 31 state = PREV }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_state = {
+					limit = {  
+						OR = {				
+							is_controlled_by = event_target:trade_target
+							is_owned_by = event_target:trade_target
+						}
+					}
+					has_resources_amount = { resource = tungsten amount > 31 state = PREV }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_state = {
+					limit = {  
+						OR = {				
+							is_controlled_by = event_target:trade_target
+							is_owned_by = event_target:trade_target
+						}
+					}
+					has_resources_amount = { resource = rubber amount > 31 state = PREV }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_state = {
+					limit = {  
+						OR = {				
+							is_controlled_by = event_target:trade_target
+							is_owned_by = event_target:trade_target
+						}
+					}
+					has_resources_amount = { resource = oil amount > 31 state = PREV }
+				}
+			}
+		}
 		add_opinion_modifier = { target = event_target:trade_target modifier = embargo }	
 		event_target:trade_target = { add_opinion_modifier = { target = ROOT modifier = relation_embargo } }
 		hidden_effect = {
@@ -85,6 +303,9 @@ country_event = { #re-evaluate trade relationship
 
 	option = {
 		name = trade.1.squo
+		ai_chance = {
+			base = 50
+		}
 	}
 }
 
