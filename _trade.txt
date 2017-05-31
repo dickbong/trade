@@ -1,0 +1,47 @@
+ideas = {
+
+	embargo = { 
+		law = yes
+		embargo_italy = {
+			
+			available = {
+				NOT = {
+					has_country_flag = has_trade_laws_italy
+					tag = ITA
+				}
+			}
+			
+			on_add = {
+				add_opinion_modifier = { target = ITA modifier = embargo }	
+				ITA = { 
+					add_opinion_modifier = { target = ROOT modifier = relation_embargo } 
+					country_event = { id = trade.4 }
+				}
+				hidden_effect = {
+					news_event = { id = trade.9	days = 2 }
+				}
+			}
+			
+			ai_will_do = {
+   				factor = 1
+				
+				modifier = {
+					factor = 0
+					has_opinion = { target = ITA value > -50 }	
+				}
+				
+   				modifier = {
+					factor = 10
+					has_opinion = { target = ITA value < -50 }	
+				}
+				
+				modifier = {
+					factor = 10
+					any_country = 
+				}
+   			}
+			
+			cancel_if_invalid = yes
+		}
+	}
+}

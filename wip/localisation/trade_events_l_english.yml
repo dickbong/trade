@@ -19,7 +19,7 @@
  trade.3.a:0 "Unfortunate."
 
  trade.4.title:0 "[FROM.GetName] has Embargoed us!"
- trade.4.d:0 "Likely due to the gradual collapse of [FROM.GetName]-[ROOT.GetName] relations, the [FROM.GetAdjective]s have embargoed our country. The cut-off of trade has done nothing to repair our relations and only destroyes any hope of future bilateral trade. We are advised to put stipulations on trade as well, but if we have any hope of trading with [FROM.GetName] again, we should repair relations. If we are able to be percieved as a friend by [FROM.GetLeader], we may be able to trade with them once again. In the mean time, let us hope that we are able to get our resources from other countries."
+ trade.4.desc:0 "Likely due to the gradual collapse of [FROM.GetName]-[ROOT.GetName] relations, the [FROM.GetAdjective]s have embargoed our country. The cut-off of trade has done nothing to repair our relations and only destroyes any hope of future bilateral trade. We are advised to put stipulations on trade as well, but if we have any hope of trading with [FROM.GetName] again, we should repair relations. If we are able to be percieved as a friend by [FROM.GetLeader], we may be able to trade with them once again. In the mean time, let us hope that we are able to get our resources from other countries."
  trade.4.a:0 "Blast!"
 
  trade.5.title:0 "Re-evaluating our Trade with [trade_target.GetName]"
@@ -39,3 +39,7 @@
  trade.8.title:0 "[FROM.GetName] has lifted the Embargo on us!"
  trade.8.desc:0 "Likely due to the gradual improvement of [FROM.GetName]-[ROOT.GetName] relations, the [FROM.GetAdjective]s have agreed to release the embargo on our country. This opens a new chapter for relations and bilateral investment and trade if we are willing. Although they have been willing enough to lift the trade limitations, is it a good idea to resume trade between our two countries? We are grateful to be using [FROM.GetAdjective] resources again, but should we be so quick to letthem use our precious resources? On the other hand, lifting any sanctions or embargoes we have would greatly improve relations."
  trade.8.a:0 "Hooray!"
+ 
+ trade.9.title:0 "[FROM.GetName] has Embargoed Italy"
+ trade.9.desc:0 "Likely due to the gradual collapse of [FROM.GetName]-Italy relations, the [FROM.GetAdjective]s have embargoed the country."
+ trade.9.a:0 "Noted."
