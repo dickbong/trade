@@ -94,7 +94,8 @@ country_event = { #from has put light sanctions on us
 	is_triggered_only = yes
 
 	option = {
-		name = trade.2.a	
+		name = trade.2.a
+		custom_effect_tooltip = trade.minorsanctions
 	}
 }
 
@@ -105,25 +106,27 @@ country_event = { #from has sanctioned us
 	is_triggered_only = yes
 
 	option = {
-		name = trade.2.a	
+		name = trade.2.a
+		custom_effect_tooltip = trade.sanctions
 	}
 }
 
 country_event = { #from has embargoed us !!!
-	id = trade.5
-	title = trade.5.title
-	desc = trade.5.desc
+	id = trade.4
+	title = trade.4.title
+	desc = trade.4.desc
 	is_triggered_only = yes
 
 	option = {
-		name = trade.2.a	
+		name = trade.2.a
+		custom_effect_tooltip = trade.embargo
 	}
 }
 
-country_event = { #re-evaluate trade relationship, take of sanctions
-	id = trade.1
-	title = trade.1.title
-	desc = trade.1.desc
+country_event = { #re-evaluate trade relationship, take off sanctions
+	id = trade.5
+	title = trade.5.title
+	desc = trade.5.desc
 	trigger = {	
 		any_country = {
 			has_opinion = { target = PREV value > 10 }
@@ -165,7 +168,7 @@ country_event = { #re-evaluate trade relationship, take of sanctions
 		ROOT = {
 			remove_opinion_modifier = { target = event_target:trade_target modifier = minor_sanctions }
 			remove_opinion_modifier = { target = event_target:trade_target modifier = relation_minor_sanctions }
-			added_opinion_modifier = { target = event_target:trade_target modifier = relation_lifted_minor_sanctions }
+			add_opinion_modifier = { target = event_target:trade_target modifier = relation_lifted_minor_sanctions }
 		}
 		hidden_effect = {
 			event_target:trade_target = {
@@ -180,7 +183,7 @@ country_event = { #re-evaluate trade relationship, take of sanctions
 		ROOT = {
 			remove_opinion_modifier = { target = event_target:trade_target modifier = minor_sanctions }
 			remove_opinion_modifier = { target = event_target:trade_target modifier = relation_sanctions }
-			added_opinion_modifier = { target = event_target:trade_target modifier = relation_lifted_sanctions }
+			add_opinion_modifier = { target = event_target:trade_target modifier = relation_lifted_sanctions }
 		}
 		hidden_effect = {
 			event_target:trade_target = {
@@ -195,7 +198,7 @@ country_event = { #re-evaluate trade relationship, take of sanctions
 		ROOT = {
 			remove_opinion_modifier = { target = event_target:trade_target modifier = embargo }
 			remove_opinion_modifier = { target = event_target:trade_target modifier = relation_embargo }
-			added_opinion_modifier = { target = event_target:trade_target modifier = relation_lifted_embargo }
+			add_opinion_modifier = { target = event_target:trade_target modifier = relation_lifted_embargo }
 		}
 		hidden_effect = {
 			event_target:trade_target = {
@@ -206,5 +209,38 @@ country_event = { #re-evaluate trade relationship, take of sanctions
 
 	option = {
 		name = trade.1.squo
+	}
+}
+
+country_event = { #from has lifted light sanctions
+	id = trade.6
+	title = trade.6.title
+	desc = trade.6.desc
+	is_triggered_only = yes
+
+	option = {
+		name = trade.6.a	
+	}
+}
+
+country_event = { #from has lifted sanctions
+	id = trade.7
+	title = trade.7.title
+	desc = trade.7.desc
+	is_triggered_only = yes
+
+	option = {
+		name = trade.7.a	
+	}
+}
+
+country_event = { #from has lifted the embargo
+	id = trade.4
+	title = trade.4.title
+	desc = trade.4.desc
+	is_triggered_only = yes
+
+	option = {
+		name = trade.2.a	
 	}
 }
