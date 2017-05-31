@@ -8,12 +8,17 @@ country_event = { #re-evaluate trade relationship
 	id = trade.1
 	title = trade.1.title
 	desc = trade.1.desc
-	trigger = {
-		has_opinion = { target = any_country value < -10 }	
+	trigger = {	
 		any_country = {
-			has_opinion_modifier = embargo
-			has_opinion_modifier = sanctions
-			has_opinion_modifier = minor_sanctions
+			has_opinion = { target = PREV value < -10 }
+			NOT = {
+				has_opinion_modifier = embargo
+				has_opinion_modifier = sanctions
+				has_opinion_modifier = minor_sanctions
+			}
+			NOT = {
+				tag = ROOT
+			}
 		}
 	}
 
@@ -23,37 +28,44 @@ country_event = { #re-evaluate trade relationship
 
 	immediate = {
 		random_country = {
-			limit = { has_opinion = { target = PREV value < -10 } }
+			limit = { 
+				has_opinion = { target = PREV value < -10 } 
+				NOT = { tag = ROOT }
+				NOT = {
+					has_opinion_modifier = embargo
+					has_opinion_modifier = sanctions
+					has_opinion_modifier = minor_sanctions
+				}
+			}
 			save_event_target_as = trade_target
 		}
 	}
 
 	option = {
 		name = trade.1.minorsanctions
-		event_target:trade_target = {
-			add_opinion_modifier = { target = ROOT modifier = minor_sanctions }
-			add_opinion_modifier = { target = ROOT modifier = relation_minor_sanctions }
-			country_event = { id = trade.2 }	
+		ROOT = {
+			add_opinion_modifier = { target = event_target:trade_target modifier = minor_sanctions }	
 		}
+		add_opinion_modifier = { target = ROOT modifier = relation_minor_sanctions }
+		country_event = { id = trade.2 }
 	}
 
 	option = {
 		name = trade.1.sanctions
-		event_target:trade_target = {
-			add_opinion_modifier = { target = ROOT modifier = sanctions }
-			add_opinion_modifier = { target = ROOT modifier = relation_sanctions }
-			country_event = { id = trade.2 }
-
+		ROOT = {
+			add_opinion_modifier = { target = event_target:trade_target modifier = sanctions }
 		}
+		add_opinion_modifier = { target = ROOT modifier = relation_sanctions }
+		country_event = { id = trade.2 }
 	}
 
 	option = {
 		name = trade.1.embargo
-		event_target:trade_target = {
-			add_opinion_modifier = { target = ROOT modifier = embargo }
-			add_opinion_modifier = { target = ROOT modifier = relation_embargo }
-			country_event = { id = trade.2 }	
-		}	
+		ROOT = {
+			add_opinion_modifier = { target = event_target:trade_target modifier = embargo }	
+		}
+		add_opinion_modifier = { target = ROOT modifier = relation_embargo }
+		country_event = { id = trade.2 }
 	}
 
 	option = {

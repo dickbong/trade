@@ -1,4 +1,4 @@
-﻿name="Trade"
+﻿name="Trade Dev Build"
 path="mod/trade/"
 tags={
 	"Gameplay"
