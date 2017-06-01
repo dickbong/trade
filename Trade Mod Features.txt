@@ -1,3 +1,25 @@
-Trade Features:
--Ability to put light sanctions, sanctions, and embargoes on countries.
--Changes base Trade Influence from 150 to 50.
+[h1]Have you ever been disappointed with trade in Hoi4?[/h1]
+
+Well not to worry because you have the Trade mod! The trade mod works to eliminate pre-existing trade influence besides relations to make trade more realistic in the aspect that to trade with a country, one must have sufficient relations. 
+
+[b]How it works:[/b]
+In order to trade with countries, you'll probably have to boost relations or be closer to them. This means instead of just clicking and dragging to get more resources, you'll have to manage relations between countries and make sure not to piss anybody off with your constant warmongering.
+
+[b]Compatibility:[/b]
+-Not Ironman Compatible
+-Compatible with mods that do not modify the 00_defines.txt file.
+
+[b]Features:[/b]
+-Changes base Trade Influence from 150 to 0.
+-Eliminates Trade Influence from similar ideologies.
+
+[b]Upcoming Features:[/b]
+-Ability to put embargoes on countries.
+-Ability to sanction countries for doing certain things, i.e. justifying wars, occupying territory.
+-Focus Tree additions to include trading.
+-Trade Related Wargoals.
+-Editing Trade Laws/Adding new ones.
+-Editing the AI to be more trade friendly.
+
+[b]Looking to help?[/b]
+We could always use help with coding and adding certain aspects. Please contact us through Steam or discord.
